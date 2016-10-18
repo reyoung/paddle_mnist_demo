@@ -21,4 +21,4 @@ hidden2 = fc_layer(input=hidden1, size=200, act=TanhActivation(),
                    layer_attr=ExtraAttr(drop_rate=0.5))
 predict = fc_layer(input=hidden2, size=10, act=SoftmaxActivation())
 
-outputs(classification_cost(input=predict, label=data_layer(name='label', size=10)))
+outputs(predict)
